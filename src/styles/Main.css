@@ -1,0 +1,13 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Força exatamente 3 colunas iguais */
+  gap: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Garante que o texto de boas-vindas ocupe todas as 3 colunas */
+main > p, main > h1, main > h2, main > div.boas-vindas {
+  grid-column: 1 / -1;
+}
