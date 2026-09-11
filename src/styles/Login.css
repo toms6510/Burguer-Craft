@@ -1,0 +1,511 @@
+:root {
+  --bg-body: #090a0f;
+  --bg-surface: #0d0e14;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --text-main: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --primary-orange: #ff7a00;
+  --primary-hover: #ff5e00;
+}
+
+/* =========================
+   RESET
+========================= */
+
+.login-page,
+.login-page * {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.72)
+    ),
+    url('/boss.jpg') center / cover no-repeat;
+
+  color: var(--text-main);
+}
+
+/* =========================
+   CAIXA PRINCIPAL
+========================= */
+
+.box {
+  width: 900px;
+  max-width: 95vw;
+  min-height: 520px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: rgba(15, 16, 20, 0.96);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.65);
+}
+
+/* =========================
+   PAINEL ESQUERDO
+========================= */
+
+.painel-esq {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 45px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 122, 0, 0.14),
+      rgba(13, 14, 20, 0.98)
+    );
+
+  border-right: 1px solid var(--border-color);
+}
+
+/* =========================
+   BOLINHAS MAC
+========================= */
+
+.bolinhas {
+  position: absolute;
+
+  top: 20px;
+  left: 28px;
+
+  display: flex;
+  gap: 8px;
+}
+
+.bola {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.bola.red {
+  background: #ff5f56;
+}
+
+.bola.yellow {
+  background: #ffbd2e;
+}
+
+.bola.green {
+  background: #27c93f;
+}
+
+/* =========================
+   CONTEÚDO ESQUERDO
+========================= */
+
+.painel-esq-conteudo {
+  max-width: 350px;
+}
+
+.tag {
+  display: inline-block;
+
+  margin-bottom: 22px;
+
+  padding: 5px 13px;
+
+  border: 1px solid rgba(255, 122, 0, 0.6);
+  border-radius: 20px;
+
+  background: rgba(255, 122, 0, 0.1);
+
+  color: var(--primary-orange);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.painel-esq h2 {
+  margin-bottom: 12px;
+
+  color: #fff;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.painel-esq p {
+  margin-bottom: 25px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   BOTÃO CADASTRO
+========================= */
+
+.btn-cadastrar {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 11px 22px;
+
+  border: 1px solid var(--primary-orange);
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: var(--primary-orange);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.btn-cadastrar:hover {
+  background: var(--primary-orange);
+  color: #fff;
+
+  transform: translateY(-1px);
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.footer-texto {
+  position: absolute;
+
+  bottom: 22px;
+  left: 28px;
+
+  color: #596070;
+
+  font-size: 0.68rem;
+}
+
+/* =========================
+   PAINEL DIREITO
+========================= */
+
+.painel-dir {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 45px 40px;
+
+  background: rgba(13, 14, 20, 0.98);
+}
+
+/* =========================
+   LINK VOLTAR
+========================= */
+
+.painel-dir > a {
+  transition: opacity 0.2s ease;
+}
+
+.painel-dir > a:hover {
+  opacity: 0.75;
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+.painel-dir h2 {
+  margin-bottom: 8px;
+
+  color: #fff;
+
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.sub {
+  margin-bottom: 25px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+.campo {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.campo label {
+  color: var(--text-secondary);
+
+  font-size: 0.75rem;
+}
+
+.campo-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.campo-linha a {
+  color: var(--primary-orange);
+
+  font-size: 0.72rem;
+
+  text-decoration: none;
+}
+
+.campo-linha a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.campo input {
+  width: 100%;
+
+  padding: 11px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #08090b;
+
+  color: #fff;
+
+  font-size: 0.82rem;
+
+  transition: all 0.25s ease;
+}
+
+.campo input::placeholder {
+  color: #555b66;
+}
+
+.campo input:focus {
+  border-color: var(--primary-orange);
+
+  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.08);
+}
+
+/* =========================
+   BOTÃO ENTRAR
+========================= */
+
+.btn-entrar {
+  width: 100%;
+
+  margin-top: 3px;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: var(--primary-orange);
+
+  color: #fff;
+
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.btn-entrar:hover:not(:disabled) {
+  background: var(--primary-hover);
+
+  transform: translateY(-1px);
+}
+
+.btn-entrar:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+/* =========================
+   ERRO
+========================= */
+
+.login-page .painel-dir p[style*="color"] {
+  color: #ef4444 !important;
+}
+
+/* =========================
+   DIVISOR
+========================= */
+
+.divisor {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 22px 0 16px;
+
+  color: var(--text-muted);
+
+  font-size: 0.7rem;
+}
+
+.divisor::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  height: 1px;
+
+  background: var(--border-color);
+}
+
+.divisor span {
+  position: relative;
+
+  padding: 0 12px;
+
+  background: #0d0e14;
+
+  color: var(--text-muted);
+
+  z-index: 1;
+}
+
+/* =========================
+   BOTÕES SOCIAIS
+========================= */
+
+.sociais {
+  display: flex;
+
+  gap: 10px;
+}
+
+.sociais button {
+  flex: 1;
+
+  padding: 9px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #fff;
+
+  font-size: 0.75rem;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.sociais button:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+
+  .login-page {
+    padding: 15px;
+  }
+
+  .box {
+    grid-template-columns: 1fr;
+
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .painel-esq {
+    min-height: 280px;
+
+    padding: 40px 25px;
+  }
+
+  .painel-dir {
+    padding: 35px 25px;
+  }
+
+  .footer-texto {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .painel-esq h2 {
+    font-size: 1.25rem;
+  }
+
+  .painel-dir h2 {
+    font-size: 1.3rem;
+  }
+
+  .box {
+    border-radius: 14px;
+  }
+}
